@@ -1,0 +1,284 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+
+.header {
+  min-height: 50px;
+  transition: min-height 0.3s;
+  display: flex;
+  justify-content: space-between;
+  background-color: beige;
+}
+
+.Resto_header {
+  width: 100%;
+  /* border: 10px solid black; */
+}
+
+.title {
+  font-weight: 300;
+  font-size: 3em;
+  margin: 0.5em 0.25em;
+  margin-left: 10px;
+  display: inline-block;
+  color: #212121;
+}
+
+.menu_drawer {
+  font-size: 32px;
+  margin: 10px auto;
+  margin-right: 10px;
+  text-decoration: none;
+  display: block;
+  width: 44px;
+  height: 44px;
+}
+
+
+
+.nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 1.3em;
+  text-decoration: none;
+  color: #616161;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.nav a:hover {
+  color: #000;
+  background-color: beige;
+}
+
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  text-align: center;
+  background-image: url("../public/images/heros/hero-image_2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: green;
+}
+
+.jumbotron_teks {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.jumbotron_title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.jumbotron_teks2 {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.content {
+  padding: 20px;
+}
+
+.card_latest {
+  width: 100%;
+  margin: auto auto;
+  text-align: center;
+}
+
+.text_label {
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 3em;
+  margin: 0.5em 0.25em;
+  margin-left: 10px;
+  display: inline-block;
+  color: #212121;
+}
+
+.card {
+  margin: 12px auto auto;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 10px;
+  margin-left: 17%;
+}
+
+.card-item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 50%;
+  border-radius: 5px;
+  background-color: beige;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 45vh;
+}
+
+.card-item-content {
+  padding: 0.5em 1em;
+  background-color: beige;
+}
+
+.card-item-title {
+  font-size: 12px;
+}
+
+.card-item-sub {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.card-city {
+  font-weight: 600;
+  padding: 3px 5px;
+  border-radius: 2px;
+  background-color: #fcddb0;
+}
+
+.card-rating {
+  font-weight: 600;
+  padding: 3px 5px;
+  border-radius: 2px;
+  background-color: #fcddb0;
+}
+
+.card-city,
+.card-rating {
+  margin-bottom: 10px;
+}
+
+.card-desription {
+  margin-top: 18px;
+  font-size: 17px;
+}
+
+footer {
+  background-color: beige;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer, p {
+  font-size: 20px;
+  color: #666666cd;
+
+}
+
+
+
+
+@media screen and (max-width: 499px) {
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .menu_drawer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .card-item-content {
+    padding: 16px 32px 32px 32px;
+  }
+
+  .card-item-title {
+    font-size: 18px;
+  }
+
+  .card-desription {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav__list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
